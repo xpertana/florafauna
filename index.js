@@ -1,4 +1,5 @@
 module.exports = {
+  client: require("./src/faunaClient"),
   create: require("./src/faunaCreate"),
   createClass: require("./src/faunaCreateClass"),
   createDB: require("./src/faunaCreateDB"),
