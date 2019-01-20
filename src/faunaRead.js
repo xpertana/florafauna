@@ -1,4 +1,3 @@
-const cuid = require("cuid");
 const faunadb = require("faunadb"),
   q = faunadb.query;
 

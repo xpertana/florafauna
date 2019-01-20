@@ -1,5 +1,3 @@
-const cuid = require("cuid");
-const KEY = "fnADFHKVUtACDaQYTXHDiMfbHU4RJDTI0Kba9c60";
 const faunadb = require("faunadb"),
   q = faunadb.query;
 
