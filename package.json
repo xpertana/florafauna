@@ -1,0 +1,14 @@
+{
+  "name": "florafauna",
+  "version": "0.0.1",
+  "description": "Higher level interface to base Fauna DB methods",
+  "main": "index.js",
+  "repository": "https://github.com/xpertana/flora.git",
+  "author": "Glenn Schleicher <glenn@xpertana.com>",
+  "license": "ISC",
+  "private": false,
+  "dependencies": {
+    "cuid": "^2.1.4",
+    "faunadb": "^2.5.2"
+  }
+}
