@@ -1,10 +1,10 @@
 const faunadb = require("faunadb"),
   q = faunadb.query;
 
-module.exports = async function(faunaKey, id = "cjqwkq9ie0001u1mnke9ulmur") {
+module.exports = async function(faunaKey, dbClass, refId) {
   const client = new faunadb.Client({ secret: KEY });
   const R = await client
-    .query(q.Get(q.Match(q.Index("features_by_id"), id)))
+    .query(q.Delete(q.Ref(q.Class(dbClass), refId)))
     .catch(e => e);
   return R;
 };

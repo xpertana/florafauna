@@ -1,25 +1,27 @@
+const genTermObj = require("./genTermObj");
+const genValueObj = require("./genValueObj");
+
 const faunadb = require("faunadb"),
   q = faunadb.query;
 
-module.exports = async function(
+module.exports = async function({
   faunaKey,
   dbClass,
-  dbField = "id",
-  unique = true
-) {
+  name,
+  terms,
+  values,
+  unique = false
+}) {
   const client = new faunadb.Client({ secret: faunaKey });
-  const name = `${dbClass}_by_${dbField}`;
-  console.log(name);
+  const obj = {
+    name,
+    source: q.Class(dbClass),
+    unique
+  };
 
-  const R = await client
-    .query(
-      q.CreateIndex({
-        name,
-        source: q.Class(dbClass),
-        terms: [{ field: ["data", dbField] }],
-        unique
-      })
-    )
-    .catch(e => e);
+  if (terms) obj.terms = genTermObj(terms);
+  if (values) obj.values = genValueObj(values);
+
+  const R = await client.query(q.CreateIndex(obj)).catch(e => e);
   return R;
 };

@@ -16,7 +16,7 @@ module.exports = async function(
       q.CreateClass({ name: dbClass, ttl_days: ttl, history_days: history })
     );
 
-    // create an index on the id field. true by default
+    // create two indexes on the id field: class_by_id and classrefs_by_id. true by default
     if (idIndex) {
       result.index = await client.query(
         q.CreateIndex({
@@ -26,7 +26,17 @@ module.exports = async function(
           unique: true
         })
       );
+      result.refindex = await client.query(
+        q.CreateIndex({
+          name: `${dbClass}refs_by_id`,
+          source: q.Class(dbClass),
+          terms: [{ field: ["data", "id"] }],
+          values: [{ field: ["ref"] }],
+          unique: true
+        })
+      );
     }
+
     return result;
   } catch (e) {
     return e;
