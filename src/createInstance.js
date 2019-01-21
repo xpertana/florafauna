@@ -5,8 +5,9 @@ const faunadb = require("faunadb"),
 module.exports = async function(faunaKey, dbClass, data) {
   const KEY = faunaKey;
   const client = new faunadb.Client({ secret: KEY });
-  const R = await client.query(
-    q.Create(q.Class(dbClass), { id: cuid(), data: { ...data, id: cuid() } })
-  );
+
+  // add id field if one does not already exist
+  data.id = data.id || cuid();
+  const R = await client.query(q.Create(q.Class(dbClass), { data }));
   return R;
 };

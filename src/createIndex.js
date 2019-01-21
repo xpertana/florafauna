@@ -5,10 +5,9 @@ module.exports = async function(
   faunaKey,
   dbClass,
   dbField = "id",
-  unique = false
+  unique = true
 ) {
-  const KEY = faunaKey || ENGAGEDEMO_SECRET;
-  const client = new faunadb.Client({ secret: KEY });
+  const client = new faunadb.Client({ secret: faunaKey });
   const name = `${dbClass}_by_${dbField}`;
   console.log(name);
 
@@ -19,10 +18,8 @@ module.exports = async function(
         source: q.Class(dbClass),
         terms: [{ field: ["data", dbField] }],
         unique
-        //values: [{ field: ["data", "title"] }]
       })
     )
     .catch(e => e);
-
   return R;
 };
