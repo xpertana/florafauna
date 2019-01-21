@@ -15,5 +15,6 @@ module.exports = {
   match: require("./src/match"),
   replaceInstance: require("./src/replaceInstance"),
   setId: require("./src/setId"),
+  updateId: require("./src/updateId"),
   updateInstance: require("./src/updateInstance")
 };
