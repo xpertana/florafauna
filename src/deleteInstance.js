@@ -10,7 +10,7 @@ const faunadb = require("faunadb"),
 // };
 
 module.exports = async function(faunaKey, dbClass, ref) {
-  const client = new faunadb.Client({ secret: KEY });
+  const client = new faunadb.Client({ secret: faunaKey });
   const R = await client.query(q.Delete(ref)).catch(e => e);
   return R;
 };
