@@ -7,8 +7,8 @@ module.exports = async function(faunaKey, dbClass, values) {
     const R = await createIndex({
       faunaKey,
       dbClass,
-      name: `${dbClass}_by_id`,
-      terms: "id",
+      name: `${dbClass}_by_i`,
+      terms: "i",
       values,
       unique: true
     });

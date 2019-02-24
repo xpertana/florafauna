@@ -3,15 +3,15 @@ const getId = require("./getId");
 const replaceInstance = require("./replaceInstance");
 const createInstance = require("./createInstance");
 
-module.exports = async function(faunaKey, dbClass, id, obj) {
+module.exports = async function(faunaKey, dbClass, i, obj) {
   try {
     obj.id = id; // keep the id field the same! all other fields will be overwritten
-    const R = await getId(faunaKey, dbClass, id);
+    const R = await getId(faunaKey, dbClass, i);
     console.log(R);
 
     if (!R.ref) {
       // id does not exist...create new
-      obj.id = id; // add the id to the object
+      obj.i = i; // add the id to the object
       const R2 = await createInstance(faunaKey, dbClass, obj);
       return R2;
     }
