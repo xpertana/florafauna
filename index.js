@@ -8,13 +8,16 @@ module.exports = {
   createKey: require("./src/createKey"),
   createToken: require("./src/createToken"),
   deleteId: require("./src/deleteId"),
+  deleteName: require("./src/deleteName"),
   deleteInstance: require("./src/deleteInstance"),
   getId: require("./src/getId"),
+  getName: require("./src/getName"),
   getInstance: require("./src/getInstance"),
   getInstances: require("./src/getInstances"),
   match: require("./src/match"),
   replaceInstance: require("./src/replaceInstance"),
   setId: require("./src/setId"),
+  setName: require("./src/setName"),
   updateId: require("./src/updateId"),
   updateInstance: require("./src/updateInstance")
 };
