@@ -32,9 +32,10 @@ core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-cuid@^2.1.4:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/cuid/-/cuid-2.1.4.tgz#e1178eb92a05ef9364b29a9942feed36d3604cdd"
+cuid@^2.1.6:
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/cuid/-/cuid-2.1.6.tgz#dc3a20b5a7497d36d32c0bf8a2997524c9c796c4"
+  integrity sha512-ZFp7PS6cSYMJNch9fc3tyHdE4T8TDo3Y5qAxb0KSA9mpiYDo7z9ql1CznFuuzxea9STVIDy0tJWm2lYiX2ZU1Q==
 
 debug@^3.1.0:
   version "3.2.6"
@@ -54,9 +55,10 @@ extend@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.2.tgz#f8b1136b4071fbd8eb140aff858b1019ec2915fa"
 
-faunadb@^2.5.2:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/faunadb/-/faunadb-2.5.2.tgz#5f46ead861aa4f1fe696302e6c76fa12c04202c6"
+faunadb@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/faunadb/-/faunadb-2.6.1.tgz#90783b32da13dd5500a873aca2629543eaa8d51f"
+  integrity sha512-n/aRPDqrE7Sor7qzNDvZHmM7nEw0wERZZPjXRx1sBS3+9mJAscFa4zOQMgbh+pTz8M3r6Djd3vxl11JLn3eSMA==
   dependencies:
     base64-js "^1.2.0"
     btoa-lite "^1.0.0"
