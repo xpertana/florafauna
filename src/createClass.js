@@ -20,9 +20,9 @@ module.exports = async function(
     if (idIndex) {
       result.index = await client.query(
         q.CreateIndex({
-          name: `${dbClass}_by_id`,
+          name: `${dbClass}_by_i`,
           source: q.Class(dbClass),
-          terms: [{ field: ["data", "id"] }],
+          terms: [{ field: ["data", "i"] }],
           unique: true
         })
       );
@@ -30,7 +30,7 @@ module.exports = async function(
         q.CreateIndex({
           name: `${dbClass}refs_by_id`,
           source: q.Class(dbClass),
-          terms: [{ field: ["data", "id"] }],
+          terms: [{ field: ["data", "i"] }],
           values: [{ field: ["ref"] }],
           unique: true
         })
