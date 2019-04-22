@@ -1,6 +1,6 @@
 {
   "name": "florafauna",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Higher level interface to base Fauna DB methods",
   "main": "index.js",
   "repository": "https://github.com/xpertana/florafauna.git",
