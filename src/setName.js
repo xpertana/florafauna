@@ -5,6 +5,8 @@ const createInstance = require("./createInstance");
 module.exports = async function(faunaKey, dbClass, n, obj) {
   try {
     //obj.n = n; // keep the id field the same! all other fields will be overwritten
+    obj.v = obj.v ? obj.v + 1 : 1;
+
     const R = await getName(faunaKey, dbClass, n);
     console.log(R);
 
