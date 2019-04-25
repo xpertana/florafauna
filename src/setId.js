@@ -7,8 +7,6 @@ module.exports = async function(faunaKey, dbClass, i, obj) {
   try {
     obj.i = i; // keep the id field the same! all other fields will be overwritten
 
-    obj.v = obj.v ? obj.v + 1 : 1;
-
     const R = await getId(faunaKey, dbClass, i);
 
     if (!R.ref) {
@@ -21,7 +19,9 @@ module.exports = async function(faunaKey, dbClass, i, obj) {
 
     // id exists..replace
     // increment the version field
-    obj.v = obj.v + 1;
+
+    //obj.v = obj.v + 1;
+    obj.v = R.data.v + 1;
 
     const R2 = await replaceInstance(faunaKey, dbClass, R.ref, obj);
     return R2;
