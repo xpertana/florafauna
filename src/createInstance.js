@@ -1,5 +1,5 @@
 const cuid = require("cuid");
-const faunadb = require("faunadb"),
+const faunadb = require("../shim/faunadb"),
   q = faunadb.query;
 
 module.exports = async function(faunaKey, dbClass, data) {

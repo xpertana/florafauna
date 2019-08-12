@@ -17,6 +17,8 @@ module.exports = {
   getInstance: require("./src/getInstance"),
   getInstances: require("./src/getInstances"),
   getAllInstances: require("./src/getAllInstances"),
+  getVmap: require("./src/getVmap"),
+  getTypeForIN: require("./src/getTypeForIN"),
   match: require("./src/match"),
   replaceInstance: require("./src/replaceInstance"),
   setId: require("./src/setId"),

@@ -55,10 +55,10 @@ extend@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.2.tgz#f8b1136b4071fbd8eb140aff858b1019ec2915fa"
 
-faunadb@^2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/faunadb/-/faunadb-2.6.1.tgz#90783b32da13dd5500a873aca2629543eaa8d51f"
-  integrity sha512-n/aRPDqrE7Sor7qzNDvZHmM7nEw0wERZZPjXRx1sBS3+9mJAscFa4zOQMgbh+pTz8M3r6Djd3vxl11JLn3eSMA==
+faunadb@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/faunadb/-/faunadb-2.7.0.tgz#97cee35c21cb8758d055f00da8cc027d122e7d2c"
+  integrity sha512-LxvxQoQ+QJS6ySEZ2DD+VPsNo4gS7oz8Be64+HlbIF1xcZG11yET3wYuyA4paAI5WATdslH8Ry+g5mqIHBWCmQ==
   dependencies:
     base64-js "^1.2.0"
     btoa-lite "^1.0.0"

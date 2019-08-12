@@ -1,4 +1,4 @@
-const faunadb = require("faunadb"),
+const faunadb = require("../shim/faunadb"),
   q = faunadb.query;
 
 module.exports = function(faunaKey) {

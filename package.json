@@ -1,6 +1,6 @@
 {
   "name": "florafauna",
-  "version": "0.0.19",
+  "version": "0.1.0",
   "description": "Higher level interface to base Fauna DB methods",
   "main": "index.js",
   "repository": "https://github.com/xpertana/florafauna.git",
@@ -9,6 +9,6 @@
   "private": false,
   "dependencies": {
     "cuid": "^2.1.6",
-    "faunadb": "^2.6.1"
+    "faunadb": "^2.7.0"
   }
 }
