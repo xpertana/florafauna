@@ -10,6 +10,5 @@ module.exports = async function(faunaKey, index, value) {
   );
 
   const R = await client.query(Q);
-  console.log(R);
   return R;
 };

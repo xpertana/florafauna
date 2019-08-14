@@ -7,6 +7,5 @@ module.exports = async function(faunaKey, index, value) {
   const Q = Map(Paginate(Match(Index(index))), Lambda("X", Get(Var("X"))));
 
   const R = await client.query(Q);
-  console.log(R);
   return R;
 };

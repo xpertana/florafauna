@@ -5,7 +5,7 @@ const createInstance = require("./createInstance");
 module.exports = async function(faunaKey, dbClass, n, obj) {
   try {
     const R = await getName(faunaKey, dbClass, n);
-    console.log(R);
+    //console.log(R);
 
     if (!R.ref) {
       // id does not exist...create new
