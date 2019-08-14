@@ -1,7 +1,7 @@
 const genTermObj = require("./genTermObj");
 const genValueObj = require("./genValueObj");
 
-const faunadb = require("faunadb"),
+const faunadb = require("../shim/faunadb"),
   q = faunadb.query;
 
 module.exports = async function({
